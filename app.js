@@ -13,6 +13,7 @@ const upload = multer({ dest: 'uploads/'});
 
 app.post('/subscribe-webhook', upload.single('Video_keyword'), (req, res) => {
     console.log(req);
+    // access the file using req.file or we can also log it
      const filePath = req.file.path;
   const extension = '.mp4';
 
