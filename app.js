@@ -12,6 +12,7 @@ app.use(cors({
 const upload = multer({ dest: 'uploads/'});
 
 app.post('/subscribe-webhook', upload.single('Video_keyword'), (req, res) => {
+    console.log(req);
      const filePath = req.file.path;
   const extension = '.mp4';
 
